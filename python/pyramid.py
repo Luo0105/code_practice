@@ -8,4 +8,3 @@ def pyramid(n):
 
 a = int(input('Enter a number: '))
 pyramid(a)
-
