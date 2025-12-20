@@ -9,9 +9,12 @@ def is_prime(num):
         if num % a == 0:
             return False
     else:
-        return True
+        return True # 这里的else可以不用，可以直接return True放在for循环外面
 
 def tell_if_prime(num):
+    '''
+    从写法上来说这样不太好，因为函数最好只做一件事，我们可以只返回True或False，然后在主程序里打印结果
+    '''
     if not isinstance(num, int):
         return "Input must be an integer" # 这行其实是多余的，因为我们在主程序中就已经保证了是整数输入，但也不是完全没用因为这有可能被引用，这时候就有用了
     
@@ -41,6 +44,7 @@ def tell_if_prime(num):
 #     except ValueError:
 #         print("Please enter a valid integer.")
 
+# 我们练一下列表推导式，这个很方便
 numbers = [2, 3, 4, 5, 10, 13, 17, 20, 23, 24, 29]
 # primes = []
 # for number in numbers:
